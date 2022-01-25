@@ -1,0 +1,1 @@
+console.log("NodeJS Front Version: " + process.version);
