@@ -3,14 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "server": "cd Server && node main.js",
-    "client": "cd Client && node index.js",
-    "start": "concurrently \"npm run server\" \"npm run client\" "
+    "start": "node app.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "concurrently": "^7.0.0"
+    "express": "^4.17.2",
+    "socket.io": "^4.4.1"
   }
 }
