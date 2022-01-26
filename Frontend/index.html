@@ -4,21 +4,27 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-	<script src="https://cdn.socket.io/4.4.1/socket.io.min.js">
+	<title>Untitled Chatting App</title>
+	<script defer src="https://cdn.socket.io/4.4.1/socket.io.min.js">
+
 	</script>
 	<script defer src="index.js">
+
 	</script>
+	<link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
+	<div class="messagesHolder">
+		<ul id="messageList">
+		</ul>
+	</div>
 
-	<ul>
-
-	</ul>
-
-	<input placeholder="message">
-    <button>Send</button>
-    
+	<div class="inputHolder">
+		<input type="text" class="msgInput" id="msgInput" placeholder="Write a message." />
+        <button class="sendBtn sendBtnEmoji" id="sendBtn">
+    </div>
+    <button onclick="scrollToBottomMessage()" id="scrollToBottomMessageBtn">
 </body>
+
 </html>
