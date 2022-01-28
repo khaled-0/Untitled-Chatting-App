@@ -20,11 +20,17 @@
 		</ul>
 	</div>
 
-	<div class="inputHolder">
+	<div class="inputHolder" style="display: none;">
 		<input type="text" class="msgInput" id="msgInput" placeholder="Write a message." />
-        <button class="sendBtn sendBtnEmoji" id="sendBtn">
+        <button class="sendBtn sendBtnEmoji" id="sendBtn"></button>
     </div>
-    <button onclick="scrollToBottomMessage()" id="scrollToBottomMessageBtn">
+    <button onclick="scrollToBottomMessage()" id="scrollToBottomMessageBtn"></button>
+
+    <div class="initializationScreen" style="display: none;">
+        <h3>Enter your username!</h3>
+        <input type="text" class="msgInput" id="nameInput" placeholder="E.g Joe" maxlength="20">
+        <button class="sendBtn" id="setUsernameBtn">GO</button>
+    </div>
 </body>
 
 </html>

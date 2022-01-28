@@ -1,8 +1,8 @@
 html, body {
     padding: 0;
     margin: 0;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
 }
 
 body {
@@ -12,6 +12,53 @@ body {
     position: fixed;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+}
+
+.initializationScreen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    position: absolute;
+    top: 35%;
+    left: auto;
+    right: auto;
+    border: none;
+    background-color: whitesmoke;
+    cursor: pointer;
+    padding: 16px;
+    border-radius: 10px;
+    box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, .18);
+}
+
+.initializationScreen h3 {
+    color: #000000;
+    margin: 0px;
+    margin-bottom: 10px;
+}
+
+#nameInput {
+    width: 75%;
+}
+
+#setUsernameBtn {
+    background-image: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin: 0px;
+    margin-top: 12px;
+    padding: 10px;
+}
+
+@media (pointer: fine) {
+    #setUsernameBtn:hover {
+        background-color: #bebbbbce;
+    }
+}
+
+#setUsernameBtn:active {
+    margin-right: 12px;
 }
 
 .messagesHolder {
@@ -27,14 +74,45 @@ body {
 }
 
 #messageList li {
-    word-break: break-word;
-    padding-left: 2px;
-    padding-right: 2px;
-    padding-top: 4px;
-    padding-bottom: 4px;
-    margin: 4px;
+    margin-bottom: 1rem;
+    min-height: 1.3rem;
+    padding: 4px;
+    align-content: center;
     background-color: #ffffff;
+}
 
+.singleMessage {
+    font-size: 1rem;
+    line-height: 1.1rem;
+    position: relative;
+}
+
+.username {
+    display: inline-block;
+    font-size: inherit;
+    font-weight: bold;
+    color: red;
+    max-width: 20rem;
+    overflow: hidden;
+    vertical-align: text-bottom;
+}
+
+.timestamp {
+    font-weight: lighter;
+    font-size: 0.7rem;
+    margin-left: 0.25rem;
+    color: #72767d;
+    vertical-align: text-top;
+}
+
+.messageBody {
+    font-size: inherit;
+    padding-top: 0.2rem;
+    display: block;
+    min-height: 1rem;
+    padding-left: 0.2rem;
+    font-weight: 400;
+    color: black;
 }
 
 .inputHolder {
@@ -76,6 +154,10 @@ body {
         max-width: 60vw;
     }
 
+    .initializationScreen {
+        max-width: 30vw;
+    }
+
 }
 
 .sendBtn {
@@ -106,6 +188,7 @@ body {
     margin-bottom: 2px;
 }
 
+
 .sendBtnEmoji {
     background-size: 0 0;
 }
@@ -118,7 +201,8 @@ body {
     display: none;
     position: fixed;
     bottom: 80px;
-    right: 50%;
+    left: auto;
+    right: auto;
     border: none;
     background-color: #ffffff;
     cursor: pointer;
@@ -142,7 +226,14 @@ body {
     }
 
     #messageList li {
-        color: #ffffff;
         background-color: #2b2b2b;
+    }
+
+    .timestamp {
+        color: #ffffffdc;
+    }
+
+    .messageBody {
+        color: #ffffff;
     }
 }
