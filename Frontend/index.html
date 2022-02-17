@@ -1,36 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Untitled Chatting App</title>
+    <script defer src="https://cdn.socket.io/4.4.1/socket.io.min.js"></script>
+    <script defer src="index.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Untitled Chatting App</title>
-	<script defer src="https://cdn.socket.io/4.4.1/socket.io.min.js">
-
-	</script>
-	<script defer src="index.js">
-
-	</script>
-	<link rel="stylesheet" href="styles.css">
-</head>
-
-<body>
-	<div class="messagesHolder">
-		<ul id="messageList">
-		</ul>
-	</div>
-
-	<div class="inputHolder" style="display: none;">
-		<input type="text" class="msgInput" id="msgInput" placeholder="Write a message." />
-        <button class="sendBtn sendBtnEmoji" id="sendBtn"></button>
+  <body style="display: none">
+    <div class="header-container">
+      <div class="title-container">
+        <span class="head-title">Untitled Chatting App</span>
+        <span class="head-subtitle">Totally Anynomus</span>
+      </div>
+      <div class="buttons-container">
+        <span id="connectionStatus">Connecting..</span>
+        <i id="header-menubtn" tabindex="0"> </i>
+      </div>
     </div>
-    <button onclick="scrollToBottomMessage()" id="scrollToBottomMessageBtn"></button>
-
-    <div class="initializationScreen" style="display: none;">
-        <h3>Enter your username!</h3>
-        <input type="text" class="msgInput" id="nameInput" placeholder="E.g Joe" maxlength="20">
-        <button class="sendBtn" id="setUsernameBtn">GO</button>
+    <div id="menu-options-container" style="display: none">
+      <li>Nice Option 1</li>
+      <li>Nice Option 2</li>
+      <li>Nice Option 3</li>
     </div>
-</body>
 
+    <div class="messagesHolder">
+      <ul id="messageList"></ul>
+    </div>
+
+    <div class="inputHolder" style="display: none">
+      <input
+        type="text"
+        class="msgInput"
+        id="msgInput"
+        placeholder="Write a message."
+      />
+      <button class="sendBtn sendBtnEmoji" id="sendBtn"></button>
+    </div>
+    <button
+      onclick="scrollToBottomMessage()"
+      id="scrollToBottomMessageBtn"
+    ></button>
+
+    <div class="initializationScreen" style="display: none">
+      <h3>Enter your username!</h3>
+      <input
+        type="text"
+        class="msgInput"
+        id="nameInput"
+        placeholder="E.g Joe"
+        maxlength="20"
+      />
+      <button class="sendBtn" id="setUsernameBtn">GO</button>
+    </div>
+  </body>
 </html>
