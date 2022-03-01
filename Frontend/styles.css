@@ -23,7 +23,7 @@ body {
 /**********************/
 
 .header-container {
-  background-color: #212121;
+  background-color: #f1f1f1;
   width: 100%;
   height: 5rem;
   overflow: hidden;
@@ -53,12 +53,22 @@ body {
 
 .head-title {
   font-size: 1.25rem;
-  color: white;
+  color: black;
   text-overflow: ellipsis;
 }
 .head-subtitle {
   font-size: 0.9rem;
-  color: white;
+  color: black;
+}
+
+@media (prefers-color-scheme: dark) {
+  .header-container {
+    background-color: #212121;
+  }
+  .head-title,
+  .head-subtitle {
+    color: #ffffff;
+  }
 }
 
 /**********************/
@@ -70,7 +80,7 @@ body {
 }
 
 #header-menubtn {
-  background-image: url(assets/ic_menu_vertical_white.svg);
+  background-image: url(assets/ic_menu_vertical_black.svg);
   background-repeat: no-repeat;
   height: 1.6rem;
   width: 1.6rem;
@@ -80,13 +90,23 @@ body {
 }
 
 #header-menubtn:hover {
-  background-color: #ffffff33;
+  background-color: #00000033;
+}
+
+@media (prefers-color-scheme: dark) {
+  #header-menubtn {
+    background-image: url(assets/ic_menu_vertical_white.svg);
+  }
+
+  #header-menubtn:hover {
+    background-color: #ffffff33;
+  }
 }
 
 /**********************/
 
 #menu-options-container {
-  background-color: #222;
+  background-color: #ddd;
   position: fixed;
   right: 0.75rem;
   top: calc(var(--header-height) - 0.75rem);
@@ -100,7 +120,7 @@ body {
 }
 
 #menu-options-container li {
-  color: white;
+  color: black;
   user-select: none;
   list-style: none;
   padding: 0.75rem;
@@ -110,8 +130,22 @@ body {
 }
 
 #menu-options-container li:hover {
-  background-color: #ffffff22;
+  background-color: #00000022;
   cursor: pointer;
+}
+
+@media (prefers-color-scheme: dark) {
+  #menu-options-container {
+    background-color: #222;
+  }
+
+  #menu-options-container li {
+    color: white;
+  }
+
+  #menu-options-container li:hover {
+    background-color: #ffffff22;
+  }
 }
 
 /*********************/
@@ -276,9 +310,8 @@ body {
 }
 
 @media (pointer: fine) {
-  /* Rules for devices with mouse here */
   .sendBtn:hover {
-    background-color: #ffffffce;
+    background-color: #7b7c7e8c;
   }
 }
 
